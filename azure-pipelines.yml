@@ -12,6 +12,14 @@ stages:
 - stage: Build
   displayName: Build and push stage
   jobs:
-  - job: A
+  - job: FirstJob
     steps:
     - bash: echo "A"
+  - job: SecondJob
+    steps:
+    - task: InvokeRESTAPI@1
+      inputs:
+        connectionType: 'connectedServiceName'
+        serviceConnection: 'burp'
+        method: 'POST'
+        waitForCompletion: 'false'

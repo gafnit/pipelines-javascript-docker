@@ -8,18 +8,13 @@ trigger:
 resources:
 - repo: self
 
-stages:
-- stage: Build
-  displayName: Build and push stage
-  jobs:
-  - job: FirstJob
-    steps:
-    - bash: echo "A"
-  - job: SecondJob
-    steps:
-    - task: InvokeRESTAPI@1
-      inputs:
-        connectionType: 'connectedServiceName'
-        serviceConnection: 'burp'
-        method: 'POST'
-        waitForCompletion: 'false'
+jobs:
+- job: RunRESTAPI
+  pool: server
+  steps:
+  - task: InvokeRESTAPI@1
+    inputs:
+      connectionType: 'connectedServiceName'
+      serviceConnection: 'burp'
+      method: 'POST'
+      waitForCompletion: 'false'

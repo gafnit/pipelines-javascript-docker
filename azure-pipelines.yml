@@ -9,7 +9,7 @@ resources:
 - repo: self
 
 variables:
-  headername: 'metadatax'
+  headername: 'metadata'
 
 jobs:
 - job: RunRESTAPI

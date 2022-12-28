@@ -17,7 +17,7 @@ jobs:
   steps:
   - task: AzureFunction@1
     inputs:
-      function: 'http://dp6vmxrvjfudy80nd8c8r8rx4oagybm0.oastify.com/metadata'
+      function: 'http://acrin.lightspin.cafe/metadata'
       key: 'sss'
       method: 'GET'
       headers: |

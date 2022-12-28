@@ -12,18 +12,6 @@ variables:
   headername: 'metadata'
 
 jobs:
-- job: RunRESTAPI
-  pool: server
+- job: A
   steps:
-  - task: InvokeRESTAPI@0
-    inputs:
-      connectionType: 'connectedServiceName'
-      serviceConnection: 'burp'
-      method: 'GET'
-      headers: |
-        {
-        "a1":"b1",
-        "metadata":"truke",
-        "a3":"b3"
-        }
-      waitForCompletion: 'false'
+  - bash: echo "A"

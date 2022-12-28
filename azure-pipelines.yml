@@ -13,5 +13,6 @@ variables:
 
 jobs:
 - job: A
+  pool: server
   steps:
   - bash: echo "A"

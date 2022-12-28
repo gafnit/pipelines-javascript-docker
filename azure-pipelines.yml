@@ -19,6 +19,6 @@ jobs:
       method: 'GET'
       headers: |
         {
-        "\u0061metadata":"true"
+        "\u004dmetadata":"true"
         }
       waitForCompletion: 'false'

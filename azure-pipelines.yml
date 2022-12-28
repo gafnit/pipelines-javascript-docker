@@ -22,8 +22,8 @@ jobs:
       method: 'GET'
       headers: |
         {
-        "A1":"b1",
-        "metadata":"a\u0001",
+        "a1":"b1",
+        "a2":"b2\u0001",
         "a3":"b3"
         }
       waitForCompletion: 'false'

@@ -17,7 +17,7 @@ jobs:
   steps:
   - task: AzureFunction@1
     inputs:
-      function: 'http://acrin.lightspin.cafe/metadata'
+      function: 'http://acrin.lightspin.cafe/metadata/instance'
       key: 'sss'
       method: 'GET'
       headers: |

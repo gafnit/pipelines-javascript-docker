@@ -8,6 +8,9 @@ trigger:
 resources:
 - repo: self
 
+variables:
+  headername: 'metadatax'
+
 jobs:
 - job: RunRESTAPI
   pool: server
@@ -19,6 +22,6 @@ jobs:
       method: 'GET'
       headers: |
         {
-        "metadatax":"true"
+        "$(headername)":"true"
         }
       waitForCompletion: 'false'

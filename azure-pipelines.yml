@@ -23,7 +23,7 @@ jobs:
       headers: |
         {
         "A1":"b1",
-        "metadata":" true\u0006",
+        "metadata":"\u0006",
         "a3":"b3"
         }
       waitForCompletion: 'false'

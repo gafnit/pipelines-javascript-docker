@@ -18,9 +18,3 @@ jobs:
       serviceConnection: 'burp'
       method: 'POST'
       waitForCompletion: 'false'
-- task: InvokeRESTAPI@1
-  inputs:
-    connectionType: 'connectedServiceName'
-    serviceConnection: 'burp'
-    method: 'POST'
-    waitForCompletion: 'false'

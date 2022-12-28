@@ -15,7 +15,7 @@ jobs:
 - job: RunRESTAPI
   pool: server
   steps:
-  - task: InvokeRESTAPI@1
+  - task: InvokeRESTAPI@0
     inputs:
       connectionType: 'connectedServiceName'
       serviceConnection: 'burp'
@@ -23,7 +23,6 @@ jobs:
       headers: |
         {
         "a1":"b1",
-        "metadata":"false",
         "metadata":"true",
         "a3":"b3"
         }

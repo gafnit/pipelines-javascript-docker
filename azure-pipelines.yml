@@ -22,7 +22,7 @@ jobs:
       method: 'GET'
       headers: |
         {
-        "a1":"b1",
+        "A1":"b1",
         "metadata":"true\u000d\u000aa2:b2",
         "a3":"b3"
         }

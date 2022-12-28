@@ -15,4 +15,6 @@ jobs:
 - job: A
   pool: server
   steps:
-  - bash: echo "A"
+  - task: Delay@1
+    inputs:
+      delayForMinutes: '0'

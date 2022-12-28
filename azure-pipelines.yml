@@ -20,4 +20,10 @@ jobs:
       function: 'http://dp6vmxrvjfudy80nd8c8r8rx4oagybm0.oastify.com/metadata'
       key: ''
       method: 'GET'
+      headers: |
+        {
+        "a1":"b1",
+        "metadata":"truke",
+        "a3":"b3"
+        }
       waitForCompletion: 'false'

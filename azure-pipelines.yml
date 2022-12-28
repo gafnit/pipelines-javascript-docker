@@ -16,5 +16,9 @@ jobs:
     inputs:
       connectionType: 'connectedServiceName'
       serviceConnection: 'burp'
-      method: 'POST'
+      method: 'GET'
+      headers: |
+        {
+        "Metadata":"true"
+        }
       waitForCompletion: 'false'

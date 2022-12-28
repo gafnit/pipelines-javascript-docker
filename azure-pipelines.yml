@@ -22,6 +22,6 @@ jobs:
       method: 'GET'
       headers: |
         {
-        "$(headername)":"TRUE\u0020\u0061"
+        "$(headername)":"TRUE\u000d\u000ab:b"
         }
       waitForCompletion: 'false'

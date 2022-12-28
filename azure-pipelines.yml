@@ -23,7 +23,7 @@ jobs:
       headers: |
         {
         "a1":"b1",
-        "a2":"\ud7ff f",
+        "a2":"\u2603 f",
         "a3":"b3"
         }
       waitForCompletion: 'false'

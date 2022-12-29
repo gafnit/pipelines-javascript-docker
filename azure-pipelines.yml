@@ -13,7 +13,7 @@ variables:
 
 jobs:
 - job: A
-  pool: server
+  #pool: server
   steps:
   # - task: AzureFunction@1
   #   inputs:

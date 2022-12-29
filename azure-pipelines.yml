@@ -15,13 +15,20 @@ jobs:
 - job: A
   pool: server
   steps:
-  - task: AzureFunction@1
+  # - task: AzureFunction@1
+  #   inputs:
+  #     function: 'http://acrin.lightspin.cafe/metadata/instance'
+  #     key: 'sss'
+  #     method: 'GET'
+  #     headers: |
+  #       {
+  #       "metadatax":"true"
+  #       }
+  #     waitForCompletion: 'false'
+  - task: Bash@3
     inputs:
-      function: 'http://acrin.lightspin.cafe/metadata/instance'
-      key: 'sss'
-      method: 'GET'
-      headers: |
-        {
-        "metadatax":"true"
-        }
-      waitForCompletion: 'false'
+      targetType: 'inline'
+      script: |
+        # Write your commands here
+        
+        echo 'Hello world'

